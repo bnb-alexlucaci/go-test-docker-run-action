@@ -1,0 +1,19 @@
+name: Go Test Docker Run Action Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run docker action and set output for testing
+        uses: ./
+        id: run-docker-hello-world
+        with:
+          run: |
+            docker run hello-world
