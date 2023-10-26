@@ -1,0 +1,19 @@
+# action.yml
+name: 'Docker Run Action'
+description: 'Run a command in a new container'
+inputs:
+  run:
+    description: 'Run command in container'
+    required: false
+  registry:
+    description: 'Registry'
+    required: false
+  username:
+    description: 'Username'
+    required: false
+  password:
+    description: 'Password'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
