@@ -14,6 +14,9 @@ inputs:
   password:
     description: 'Password'
     required: false
+  working-directory:
+    description: 'Working directory'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
