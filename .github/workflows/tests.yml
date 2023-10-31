@@ -17,3 +17,13 @@ jobs:
         with:
           run: |
             docker run hello-world
+  working-directory-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check if working-directory-works
+        uses: ./
+        with:
+          working_directory: ./.github/workflows
+          run: |
+            pwd
